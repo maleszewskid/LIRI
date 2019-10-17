@@ -1,0 +1,28 @@
+{
+    "name": "LIRI",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/maleszewskid/LIRI.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/maleszewskid/LIRI/issues"
+    },
+    "homepage": "https://github.com/maleszewskid/LIRI#readme",
+    "dependencies": {
+        "axios": "^0.19.0",
+        "dotenv": "^8.2.0",
+        "moment": "^2.24.0",
+        "node-spotify-api": "^1.1.1",
+        "omdb": "^0.8.0",
+        "request": "^2.88.0"
+    }
+}
