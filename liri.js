@@ -18,8 +18,8 @@ function switchCase() {
         case 'spotify-this-song':
             spotSong(search);
             break;
-        case 'movie-this':
-            movieInfo(search);
+        case 'artist-this':
+            artistInfo(search);
             break;
         case 'do-what-it-says':
             getRandom();
@@ -60,7 +60,7 @@ request(queryUrl, function(error, response, body) {
 function spotSong(search) {
     var searchTrack;
     if (search === undefined) {
-        searchTrack = "The Sign ace of base";
+        searchTrack = "Wolfmother Woman";
     } else {
         searchTrack = search;
     }
@@ -93,7 +93,7 @@ function logIt(dataToLog) {
 
 switchCase();
 
-function movieInfo(search) {
+function artistInfo(search) {
     var artistSearch;
     if (search === undefined) {
         artistSearch = "Star Wars";
@@ -152,9 +152,9 @@ function bandsInTown(search) {
                     console.log(bandName);
                     bandsInTown(bandName);
                 }
-            } else if (dataArr[0] === "movie-this") {
-                var movie_name = dataArr[1].trim().slice(1, -1);
-                movieInfo(movie_name);
+            } else if (dataArr[0] === "artist-this") {
+                var artist_name = dataArr[1].trim().slice(1, -1);
+                artistInfo(artist_name);
             }
         });
     };
