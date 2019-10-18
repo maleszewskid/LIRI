@@ -4,8 +4,8 @@ var keys = require("./keys.js");
 var spot = new Spotify(keys.spotify);
 var request = require('request');
 var Spotify = require('node-spotify-api');
-var queryUrl = "https://rest.bandsintown.com/artists/" + movieName + "/events?app_id=codecademy";
-var queryUrl = "http://www.omdbapi.com/?t=" + findMovie + "&y=&plot=short&apikey=trilogy";
+var queryUrl = "https://rest.bandsintown.com/artists/" + artistName + "/events?app_id=codecademy";
+var queryUrl = "http://www.omdbapi.com/?t=" + artistSearch + "&y=&plot=short&apikey=trilogy";
 var request = process.argv[2];
 var search = process.argv[3];
 
@@ -94,11 +94,11 @@ function logIt(dataToLog) {
 switchCase();
 
 function movieInfo(search) {
-    var findMovie;
+    var artistSearch;
     if (search === undefined) {
-        findMovie = "Mr. Nobody";
+        artistSearch = "Star Wars";
     } else {
-        findMovie = search;
+        artistSearch = search;
     };
 
 
@@ -121,13 +121,13 @@ function movieInfo(search) {
 
 function bandsInTown(search) {
     if (request === 'concert-this') {
-        var movieName = "";
+        var artistName = "";
         for (var i = 3; i < process.argv.length; i++) {
-            movieName += process.argv[i];
+            artistName += process.argv[i];
         }
-        console.log(movieName);
+        console.log(artistName);
     } else {
-        movieName = search;
+        artistName = search;
     }
 
     function getRandom() {
