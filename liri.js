@@ -8,7 +8,6 @@ var queryUrl = "https://rest.bandsintown.com/artists/" + artistName + "/events?a
 var queryUrl = "http://www.omdbapi.com/?t=" + artistSearch + "&y=&plot=short&apikey=trilogy";
 var request = process.argv[2];
 var search = process.argv[3];
-
 function switchCase() {
 
     switch (request) {
@@ -29,8 +28,6 @@ function switchCase() {
             break;
     }
 };
-
-
 
 request(queryUrl, function(error, response, body) {
     if (!error && response.statusCode === 200) {
@@ -55,7 +52,6 @@ request(queryUrl, function(error, response, body) {
         }
     }
 });
-}
 
 function spotSong(search) {
     var searchTrack;
